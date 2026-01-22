@@ -8,53 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Fruto daVide Brand Colors */
-    --background: 45 20% 97%; /* Off-white #F5F5F0 */
-    --foreground: 160 100% 11%; /* Verde escuro #0B3D2E */
+    /* Fruto daVide Brand Colors - Fúcsia Elegante */
+    --background: 30 25% 97%; /* Off-white quente */
+    --foreground: 340 45% 25%; /* Fúcsia escuro */
 
     --card: 0 0% 100%;
-    --card-foreground: 160 100% 11%;
+    --card-foreground: 340 45% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 100% 11%;
+    --popover-foreground: 340 45% 25%;
 
-    --primary: 160 100% 11%; /* Verde principal #0B3D2E */
+    --primary: 340 45% 25%; /* Fúcsia escuro / vinho rosado */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 50% 85%; /* Dourado suave para fundos */
-    --secondary-foreground: 160 100% 11%;
+    --secondary: 30 20% 92%; /* Off-white quente para fundos */
+    --secondary-foreground: 340 45% 25%;
 
-    --muted: 45 20% 94%;
-    --muted-foreground: 0 0% 62%; /* Cinza técnico #9E9E9E */
+    --muted: 30 15% 94%;
+    --muted-foreground: 20 10% 45%; /* Cinza quente */
 
-    --accent: 48 90% 55%; /* Dourado #D4AF37 */
-    --accent-foreground: 160 100% 11%;
+    --accent: 340 60% 45%; /* Fúcsia médio para destaques */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 45 30% 90%;
-    --input: 45 30% 90%;
-    --ring: 48 90% 55%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 340 60% 45%;
 
     --radius: 0.75rem;
     
-    /* Custom Brand Tokens */
-    --brand-green: 160 100% 11%; /* #0B3D2E */
-    --brand-gold: 48 90% 55%; /* #D4AF37 */
-    --brand-gold-light: 48 80% 75%;
-    --brand-off-white: 45 20% 97%; /* #F5F5F0 */
-    --brand-gray: 0 0% 62%; /* #9E9E9E */
+    /* Custom Brand Tokens - Fúcsia Elegante */
+    --brand-primary: 340 45% 25%; /* Fúcsia escuro / vinho rosado */
+    --brand-accent: 340 60% 45%; /* Fúcsia médio */
+    --brand-accent-light: 340 50% 65%; /* Fúcsia claro */
+    --brand-off-white: 30 25% 97%; /* Off-white quente */
+    --brand-gray: 20 10% 45%; /* Cinza quente */
+    --brand-gray-light: 20 10% 75%; /* Cinza quente claro */
+    
+    /* Legacy tokens for compatibility */
+    --brand-green: 340 45% 25%;
+    --brand-gold: 340 60% 45%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-green)), hsl(var(--brand-green)) 70%, hsl(160 80% 15%));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold-light)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(45 15% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(340 45% 25%), hsl(340 45% 25%) 70%, hsl(340 40% 30%));
+    --gradient-gold: linear-gradient(135deg, hsl(340 60% 45%), hsl(340 50% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(30 20% 95%));
     
     /* Shadows */
-    --shadow-elegant: 0 20px 50px -12px hsl(var(--brand-green) / 0.15);
-    --shadow-card: 0 8px 30px -8px hsl(var(--brand-green) / 0.1);
-    --shadow-gold: 0 8px 25px -8px hsl(var(--brand-gold) / 0.2);
+    --shadow-elegant: 0 20px 50px -12px hsl(340 45% 25% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(340 45% 25% / 0.1);
+    --shadow-gold: 0 8px 25px -8px hsl(340 60% 45% / 0.25);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -78,12 +83,14 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 160 100% 8%;
-    --foreground: 45 20% 97%;
+    --background: 340 30% 10%;
+    --foreground: 30 25% 97%;
     
-    --brand-green: 160 100% 15%;
-    --brand-gold: 48 85% 65%;
-    --gradient-hero: linear-gradient(135deg, hsl(160 100% 8%), hsl(160 90% 12%));
+    --brand-primary: 340 45% 35%;
+    --brand-accent: 340 55% 55%;
+    --brand-green: 340 45% 35%;
+    --brand-gold: 340 55% 55%;
+    --gradient-hero: linear-gradient(135deg, hsl(340 30% 10%), hsl(340 35% 15%));
   }
 }
 
