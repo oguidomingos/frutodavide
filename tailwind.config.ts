@@ -51,9 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Brand colors
+        // Brand colors - Fúcsia Elegante
         'brand-green': 'hsl(var(--brand-green))',
         'brand-gold': 'hsl(var(--brand-gold))',
+        'brand-primary': 'hsl(var(--brand-primary))',
+        'brand-accent': 'hsl(var(--brand-accent))',
         'brand-off-white': 'hsl(var(--brand-off-white))',
         'brand-gray': 'hsl(var(--brand-gray))',
       },
@@ -95,10 +97,10 @@ export default {
         },
         "pulse-gold": {
           "0%, 100%": { 
-            boxShadow: "0 0 0 0 hsl(var(--brand-gold) / 0.4)" 
+            boxShadow: "0 0 0 0 hsl(340 60% 45% / 0.4)" 
           },
           "50%": { 
-            boxShadow: "0 0 0 10px hsl(var(--brand-gold) / 0)" 
+            boxShadow: "0 0 0 10px hsl(340 60% 45% / 0)" 
           }
         }
       },
