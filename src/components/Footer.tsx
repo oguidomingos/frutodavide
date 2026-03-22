@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,15 +16,22 @@ const Footer = () => {
             </p>
             
             <div className="flex gap-4">
-              <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300 cursor-pointer">
-                <span className="font-bold">f</span>
-              </div>
-              <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300 cursor-pointer">
-                <span className="font-bold">in</span>
-              </div>
-              <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300 cursor-pointer">
+              <a
+                href="https://www.instagram.com/frutodavide"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300"
+                aria-label="Instagram da Fruto daVide"
+              >
                 <span className="font-bold">ig</span>
-              </div>
+              </a>
+              <a
+                href="mailto:frutodavide.comercial@gmail.com"
+                className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300"
+                aria-label="E-mail da Fruto daVide"
+              >
+                <span className="font-bold">@</span>
+              </a>
             </div>
           </div>
           
@@ -33,17 +40,11 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-6 text-brand-gold">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
-                <div>
-                  <div className="text-white/90">(11) 3456-7890</div>
-                  <div className="text-white/60 text-sm">Segunda a Sexta</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-white/90">contato@frutodavide.com.br</div>
+                  <a href="mailto:frutodavide.comercial@gmail.com" className="text-white/90 hover:text-brand-gold transition-colors">
+                    frutodavide.comercial@gmail.com
+                  </a>
                   <div className="text-white/60 text-sm">Resposta em 24h</div>
                 </div>
               </div>
@@ -85,7 +86,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-white/60 text-sm">
-            © 2024 Fruto daVide. Todos os direitos reservados.
+            © 2026 Fruto daVide. Todos os direitos reservados.
           </div>
           
           <div className="flex gap-6 text-white/60 text-sm">

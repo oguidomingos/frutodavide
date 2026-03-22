@@ -44,19 +44,19 @@ const FloatingCTA = () => {
               Diagnóstico Gratuito
             </Button>
             
-            <a 
-              href="https://wa.me/5511999998888" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/frutodavide"
+              target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
             >
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 className="w-full text-sm py-2"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                WhatsApp
+                Instagram
               </Button>
             </a>
           </div>

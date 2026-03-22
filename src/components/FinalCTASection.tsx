@@ -78,18 +78,18 @@ const FinalCTASection = () => {
             Ou entre em contato diretamente
           </h4>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-brand-gold font-semibold mb-2">Telefone</div>
-              <div className="text-brand-green text-lg font-medium">(11) 3456-7890</div>
-            </div>
-            <div>
-              <div className="text-brand-gold font-semibold mb-2">WhatsApp</div>
-              <div className="text-brand-green text-lg font-medium">(11) 99999-8888</div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-xl mx-auto">
             <div>
               <div className="text-brand-gold font-semibold mb-2">E-mail</div>
-              <div className="text-brand-green text-lg font-medium">contato@frutodavide.com.br</div>
+              <a href="mailto:frutodavide.comercial@gmail.com" className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
+                frutodavide.comercial@gmail.com
+              </a>
+            </div>
+            <div>
+              <div className="text-brand-gold font-semibold mb-2">Instagram</div>
+              <a href="https://www.instagram.com/frutodavide" target="_blank" rel="noopener noreferrer" className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
+                @frutodavide
+              </a>
             </div>
           </div>
         </div>

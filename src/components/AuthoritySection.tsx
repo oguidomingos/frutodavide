@@ -28,20 +28,13 @@ const stats = [
   }
 ];
 
-const testimonial = {
-  text: "A Fruto daVide transformou completamente nossos quartos. A qualidade dos tecidos e o atendimento personalizado fizeram toda a diferença. Nossos hóspedes elogiam constantemente o conforto e a elegância dos ambientes.",
-  author: "Marina Silva",
-  position: "Gerente de Operações",
-  company: "Hotel Excellence Premium"
-};
-
-const clients = [
-  "Hotel Copacabana Palace",
-  "Hospital Sírio-Libanês", 
-  "Grupo Accor",
-  "Rede D'Or",
-  "JW Marriott",
-  "Hospital Albert Einstein"
+const sectors = [
+  "Hotéis & Pousadas",
+  "Hospitais & Clínicas",
+  "Flats & Residenciais",
+  "Spas & Resorts",
+  "Corporativo",
+  "Restaurantes & Buffets"
 ];
 
 const AuthoritySection = () => {
@@ -72,40 +65,26 @@ const AuthoritySection = () => {
           ))}
         </div>
 
-        {/* Testimonial + Image */}
+        {/* Experience + Image */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="fade-in">
-            <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white relative">
-              {/* Quote icon */}
-              <div className="absolute -top-6 left-8">
-                <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-brand-green" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                  </svg>
-                </div>
-              </div>
-              
-              <blockquote className="text-lg lg:text-xl leading-relaxed mb-8 mt-4">
-                "{testimonial.text}"
-              </blockquote>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center">
-                  <span className="text-brand-gold font-bold text-xl">
-                    {testimonial.author.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <div>
-                  <div className="font-semibold text-lg">{testimonial.author}</div>
-                  <div className="text-white/80">{testimonial.position}</div>
-                  <div className="text-brand-gold text-sm">{testimonial.company}</div>
-                </div>
-              </div>
+            <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-brand-gold">
+                +44 anos transformando ambientes
+              </h3>
+              <p className="text-lg lg:text-xl leading-relaxed mb-6 text-white/90">
+                Desde 1980, a Fruto daVide fornece soluções têxteis sob medida para
+                hotelaria, saúde e corporativo em todo o Brasil.
+              </p>
+              <p className="text-lg leading-relaxed text-white/80">
+                Qualidade certificada, prazos cumpridos e atendimento consultivo
+                — tudo para que seus clientes tenham a melhor experiência.
+              </p>
             </div>
           </div>
-          
+
           <div className="slide-up">
-            <img 
+            <img
               src={textileImage}
               alt="Processo de produção de têxteis premium da Fruto daVide"
               className="w-full h-auto rounded-3xl shadow-elegant"
@@ -113,20 +92,20 @@ const AuthoritySection = () => {
           </div>
         </div>
 
-        {/* Client Logos */}
+        {/* Sectors Served */}
         <div className="text-center fade-in">
           <h3 className="text-2xl font-semibold text-brand-green mb-8">
-            Empresas que confiam na Fruto daVide
+            Setores que atendemos
           </h3>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {clients.map((client, index) => (
-              <div 
+            {sectors.map((sector, index) => (
+              <div
                 key={index}
                 className="p-6 bg-gray-50 rounded-xl text-center hover:bg-gray-100 transition-colors duration-300"
               >
                 <div className="text-brand-gray font-medium text-sm">
-                  {client}
+                  {sector}
                 </div>
               </div>
             ))}
