@@ -51,9 +51,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Brand colors - Verde & Vinho
-        'brand-verde': 'hsl(var(--brand-verde))',
-        'brand-vinho': 'hsl(var(--brand-vinho))',
+        // Brand colors - Azul Sereno + Dourado Quente
+        'brand-green': 'hsl(var(--brand-green))',
+        'brand-gold': 'hsl(var(--brand-gold))',
         'brand-primary': 'hsl(var(--brand-primary))',
         'brand-accent': 'hsl(var(--brand-accent))',
         'brand-off-white': 'hsl(var(--brand-off-white))',
@@ -61,13 +61,13 @@ export default {
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
-        'gradient-vinho': 'var(--gradient-vinho)',
+        'gradient-gold': 'var(--gradient-gold)',
         'gradient-subtle': 'var(--gradient-subtle)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
         'card': 'var(--shadow-card)',
-        'vinho': 'var(--shadow-vinho)',
+        'gold': 'var(--shadow-gold)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,12 +95,12 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
         },
-        "pulse-vinho": {
+        "pulse-gold": {
           "0%, 100%": {
-            boxShadow: "0 0 0 0 hsl(340 45% 25% / 0.4)"
+            boxShadow: "0 0 0 0 hsl(38 65% 50% / 0.4)"
           },
           "50%": {
-            boxShadow: "0 0 0 10px hsl(340 45% 25% / 0)"
+            boxShadow: "0 0 0 10px hsl(38 65% 50% / 0)"
           }
         }
       },
@@ -110,7 +110,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
-        "pulse-vinho": "pulse-vinho 2s infinite",
+        "pulse-gold": "pulse-gold 2s infinite",
       },
     },
   },

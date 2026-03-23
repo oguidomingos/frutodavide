@@ -49,13 +49,13 @@ const AuthoritySection = () => {
               className="text-center p-8 rounded-2xl bg-gradient-subtle hover:shadow-card transition-all duration-300 slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-16 h-16 bg-brand-verde rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-brand-green rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold text-brand-vinho mb-2">
+              <div className="text-4xl lg:text-5xl font-bold text-brand-gold mb-2">
                 {stat.number}
               </div>
-              <div className="text-xl font-semibold text-brand-verde mb-2">
+              <div className="text-xl font-semibold text-brand-green mb-2">
                 {stat.label}
               </div>
               <div className="text-brand-gray text-sm">
@@ -68,8 +68,8 @@ const AuthoritySection = () => {
         {/* Experience + Image */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="fade-in">
-            <div className="bg-brand-verde rounded-3xl p-8 lg:p-12 text-white">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-brand-vinho">
+            <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-brand-gold">
                 +44 anos transformando ambientes
               </h3>
               <p className="text-lg lg:text-xl leading-relaxed mb-6 text-white/90">
@@ -94,7 +94,7 @@ const AuthoritySection = () => {
 
         {/* Sectors Served */}
         <div className="text-center fade-in">
-          <h3 className="text-2xl font-semibold text-brand-verde mb-8">
+          <h3 className="text-2xl font-semibold text-brand-green mb-8">
             Setores que atendemos
           </h3>
 

@@ -24,7 +24,7 @@ const OfferSection = () => {
           <div className="bg-gradient-hero rounded-3xl p-8 lg:p-16 text-white mb-12 slide-up">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
               Agende um{" "}
-              <span className="text-brand-vinho">Diagnóstico Gratuito</span>{" "}
+              <span className="text-brand-gold">Diagnóstico Gratuito</span>{" "}
               do seu projeto agora mesmo
             </h2>
             
@@ -35,7 +35,7 @@ const OfferSection = () => {
 
             {/* What's included */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-              <h3 className="text-2xl font-semibold mb-6 text-brand-vinho">
+              <h3 className="text-2xl font-semibold mb-6 text-brand-gold">
                 O que está incluído no diagnóstico:
               </h3>
               
@@ -45,7 +45,7 @@ const OfferSection = () => {
                     key={index}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle className="w-6 h-6 text-brand-vinho flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-brand-gold flex-shrink-0 mt-0.5" />
                     <span className="text-white/90">{benefit}</span>
                   </div>
                 ))}
@@ -53,8 +53,8 @@ const OfferSection = () => {
             </div>
 
             {/* Scarcity */}
-            <div className="bg-brand-vinho/20 border border-brand-vinho/30 rounded-xl p-6 mb-8">
-              <div className="flex items-center justify-center gap-2 text-brand-vinho mb-2">
+            <div className="bg-brand-gold/20 border border-brand-gold/30 rounded-xl p-6 mb-8">
+              <div className="flex items-center justify-center gap-2 text-brand-gold mb-2">
                 <Clock className="w-5 h-5" />
                 <span className="font-semibold">Apenas 5 diagnósticos gratuitos por semana</span>
               </div>
@@ -67,7 +67,7 @@ const OfferSection = () => {
             {/* CTA Button */}
             <Button 
               size="lg" 
-              className="bg-brand-vinho text-brand-verde hover:bg-white hover:text-brand-verde text-xl px-12 py-6 rounded-xl font-bold shadow-vinho animate-pulse-vinho"
+              className="bg-brand-gold text-brand-green hover:bg-white hover:text-brand-green text-xl px-12 py-6 rounded-xl font-bold shadow-gold animate-pulse-gold"
             >
               Quero meu diagnóstico gratuito agora
             </Button>
@@ -80,15 +80,15 @@ const OfferSection = () => {
           {/* Social proof */}
           <div className="grid md:grid-cols-3 gap-8 fade-in">
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-verde mb-2">⭐⭐⭐⭐⭐</div>
+              <div className="text-3xl font-bold text-brand-green mb-2">⭐⭐⭐⭐⭐</div>
               <p className="text-brand-gray">Avaliação média dos clientes</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-vinho mb-2">2h</div>
+              <div className="text-3xl font-bold text-brand-gold mb-2">2h</div>
               <p className="text-brand-gray">Tempo médio de resposta</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-verde mb-2">100%</div>
+              <div className="text-3xl font-bold text-brand-green mb-2">100%</div>
               <p className="text-brand-gray">Dos clientes recomendam</p>
             </div>
           </div>
