@@ -14,14 +14,14 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-white fade-in">
             <div className="mb-6">
-              <span className="inline-block bg-brand-gold/20 text-brand-gold px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <span className="inline-block bg-brand-vinho/20 text-brand-vinho px-4 py-2 rounded-full text-sm font-medium mb-4">
                 +44 anos de tradição
               </span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
               Transforme seus ambientes com{" "}
-              <span className="text-brand-gold">soluções têxteis</span>{" "}
+              <span className="text-brand-vinho">soluções têxteis</span>{" "}
               sob medida.
             </h1>
             
@@ -32,7 +32,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button 
                 size="lg" 
-                className="btn-primary text-lg px-8 py-4 animate-pulse-gold"
+                className="btn-primary text-lg px-8 py-4 animate-pulse-vinho"
               >
                 Quero meu diagnóstico gratuito
               </Button>
@@ -40,7 +40,7 @@ const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-brand-green text-lg px-8 py-4"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-verde text-lg px-8 py-4"
               >
                 Ver nossos projetos
               </Button>
@@ -49,15 +49,15 @@ const HeroSection = () => {
             {/* Trust indicators */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-brand-gold mb-1">200+</div>
+                <div className="text-2xl lg:text-3xl font-bold text-brand-vinho mb-1">200+</div>
                 <div className="text-sm text-white/80">Projetos entregues</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-brand-gold mb-1">44+</div>
+                <div className="text-2xl lg:text-3xl font-bold text-brand-vinho mb-1">44+</div>
                 <div className="text-sm text-white/80">Anos de experiência</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-brand-gold mb-1">98%</div>
+                <div className="text-2xl lg:text-3xl font-bold text-brand-vinho mb-1">98%</div>
                 <div className="text-sm text-white/80">Clientes satisfeitos</div>
               </div>
             </div>
@@ -75,7 +75,7 @@ const HeroSection = () => {
               {/* Overlay with floating badge */}
               <div className="absolute top-6 right-6">
                 <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-card animate-float">
-                  <div className="text-brand-green font-semibold text-sm">Qualidade Premium</div>
+                  <div className="text-brand-verde font-semibold text-sm">Qualidade Premium</div>
                   <div className="text-brand-gray text-xs">Tecidos certificados</div>
                 </div>
               </div>

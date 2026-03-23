@@ -32,9 +32,9 @@ const ValuePropositionSection = () => {
     <section className="section-padding bg-gradient-subtle">
       <div className="container-custom">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-3xl lg:text-5xl font-bold text-brand-green mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-brand-verde mb-6">
             Por que escolher a{" "}
-            <span className="text-brand-gold">Fruto daVide?</span>
+            <span className="text-brand-vinho">Fruto daVide?</span>
           </h2>
           <p className="text-xl text-brand-gray max-w-3xl mx-auto leading-relaxed">
             Quatro pilares que garantem o sucesso do seu projeto têxtil
@@ -49,12 +49,12 @@ const ValuePropositionSection = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Icon */}
-              <div className="w-20 h-20 bg-gradient-gold rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-vinho rounded-2xl flex items-center justify-center mb-6">
                 <prop.icon className="w-10 h-10 text-white" />
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-bold text-brand-green mb-4">
+              <h3 className="text-2xl font-bold text-brand-verde mb-4">
                 {prop.title}
               </h3>
               
@@ -66,8 +66,8 @@ const ValuePropositionSection = () => {
               <ul className="space-y-3">
                 {prop.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-brand-gold rounded-full flex-shrink-0"></div>
-                    <span className="text-brand-green font-medium">{feature}</span>
+                    <div className="w-2 h-2 bg-brand-vinho rounded-full flex-shrink-0"></div>
+                    <span className="text-brand-verde font-medium">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -77,14 +77,14 @@ const ValuePropositionSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16 fade-in">
-          <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white">
+          <div className="bg-brand-verde rounded-3xl p-8 lg:p-12 text-white">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Pronto para elevar o padrão dos seus ambientes?
             </h3>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Agende uma conversa gratuita e descubra como podemos transformar seu projeto.
             </p>
-            <button className="btn-primary bg-brand-gold hover:bg-white hover:text-brand-green">
+            <button className="btn-primary bg-brand-vinho hover:bg-white hover:text-brand-verde">
               Agendar consultoria gratuita
             </button>
           </div>

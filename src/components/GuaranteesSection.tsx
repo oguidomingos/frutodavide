@@ -35,12 +35,12 @@ const guarantees = [
 
 const GuaranteesSection = () => {
   return (
-    <section className="section-padding bg-brand-green">
+    <section className="section-padding bg-brand-verde">
       <div className="container-custom">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
             Nossas{" "}
-            <span className="text-brand-gold">Garantias</span>
+            <span className="text-brand-vinho">Garantias</span>
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             Assumimos compromissos reais para que você tenha total tranquilidade
@@ -55,12 +55,12 @@ const GuaranteesSection = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Icon */}
-              <div className="w-20 h-20 bg-brand-gold rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                <guarantee.icon className="w-10 h-10 text-brand-green" />
+              <div className="w-20 h-20 bg-brand-vinho rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                <guarantee.icon className="w-10 h-10 text-brand-verde" />
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-bold text-center mb-4 text-brand-gold">
+              <h3 className="text-2xl font-bold text-center mb-4 text-brand-vinho">
                 {guarantee.title}
               </h3>
               
@@ -72,7 +72,7 @@ const GuaranteesSection = () => {
               <ul className="space-y-4">
                 {guarantee.details.map((detail, detailIndex) => (
                   <li key={detailIndex} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-brand-gold rounded-full flex-shrink-0 mt-2"></div>
+                    <div className="w-2 h-2 bg-brand-vinho rounded-full flex-shrink-0 mt-2"></div>
                     <span className="text-white/80 text-sm">{detail}</span>
                   </li>
                 ))}
@@ -83,8 +83,8 @@ const GuaranteesSection = () => {
 
         {/* Bottom guarantee statement */}
         <div className="text-center mt-16 fade-in">
-          <div className="bg-white/5 border border-brand-gold/30 rounded-2xl p-8 lg:p-12">
-            <div className="text-4xl lg:text-5xl text-brand-gold mb-4">🏆</div>
+          <div className="bg-white/5 border border-brand-vinho/30 rounded-2xl p-8 lg:p-12">
+            <div className="text-4xl lg:text-5xl text-brand-vinho mb-4">🏆</div>
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
               Garantia de Satisfação Total
             </h3>

@@ -52,8 +52,8 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         // Brand colors - Verde & Vinho
-        'brand-green': 'hsl(var(--brand-green))',
-        'brand-gold': 'hsl(var(--brand-gold))',
+        'brand-verde': 'hsl(var(--brand-verde))',
+        'brand-vinho': 'hsl(var(--brand-vinho))',
         'brand-primary': 'hsl(var(--brand-primary))',
         'brand-accent': 'hsl(var(--brand-accent))',
         'brand-off-white': 'hsl(var(--brand-off-white))',
@@ -61,13 +61,13 @@ export default {
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
-        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-vinho': 'var(--gradient-vinho)',
         'gradient-subtle': 'var(--gradient-subtle)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
         'card': 'var(--shadow-card)',
-        'gold': 'var(--shadow-gold)',
+        'vinho': 'var(--shadow-vinho)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -95,7 +95,7 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" }
         },
-        "pulse-gold": {
+        "pulse-vinho": {
           "0%, 100%": {
             boxShadow: "0 0 0 0 hsl(340 45% 25% / 0.4)"
           },
@@ -110,7 +110,7 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "slide-up": "slide-up 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
-        "pulse-gold": "pulse-gold 2s infinite",
+        "pulse-vinho": "pulse-vinho 2s infinite",
       },
     },
   },

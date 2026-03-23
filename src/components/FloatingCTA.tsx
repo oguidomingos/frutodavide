@@ -23,10 +23,10 @@ const FloatingCTA = () => {
       {isExpanded ? (
         <div className="bg-white rounded-2xl shadow-elegant p-6 max-w-sm animate-scale-in">
           <div className="flex justify-between items-start mb-4">
-            <h4 className="font-semibold text-brand-green">Precisa de ajuda?</h4>
+            <h4 className="font-semibold text-brand-verde">Precisa de ajuda?</h4>
             <button 
               onClick={() => setIsExpanded(false)}
-              className="text-brand-gray hover:text-brand-green"
+              className="text-brand-gray hover:text-brand-verde"
             >
               <X className="w-4 h-4" />
             </button>
@@ -64,7 +64,7 @@ const FloatingCTA = () => {
       ) : (
         <button
           onClick={() => setIsExpanded(true)}
-          className="bg-brand-green text-white p-4 rounded-full shadow-elegant hover:bg-brand-gold transition-all duration-300 hover:scale-110 animate-pulse-gold"
+          className="bg-brand-verde text-white p-4 rounded-full shadow-elegant hover:bg-brand-vinho transition-all duration-300 hover:scale-110 animate-pulse-vinho"
         >
           <MessageCircle className="w-6 h-6" />
         </button>
