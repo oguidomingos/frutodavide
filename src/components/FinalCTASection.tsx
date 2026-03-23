@@ -3,6 +3,8 @@ import { Quote } from "lucide-react";
 import corporateImage from "@/assets/corporate-interior.jpg";
 
 const FinalCTASection = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -74,6 +76,11 @@ const FinalCTASection = () => {
 
         {/* Contact info */}
         <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12 text-center fade-in">
+          <img
+            src={`${basePath}assets/logos/simbolo-azul-dourado.svg`}
+            alt="Fruto daVide"
+            className="h-16 w-auto mx-auto mb-6"
+          />
           <h4 className="text-2xl font-bold text-brand-green mb-6">
             Ou entre em contato diretamente
           </h4>

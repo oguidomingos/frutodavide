@@ -34,6 +34,8 @@ const guarantees = [
 ];
 
 const GuaranteesSection = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="section-padding bg-brand-green">
       <div className="container-custom">
@@ -84,7 +86,11 @@ const GuaranteesSection = () => {
         {/* Bottom guarantee statement */}
         <div className="text-center mt-16 fade-in">
           <div className="bg-white/5 border border-brand-gold/30 rounded-2xl p-8 lg:p-12">
-            <div className="text-4xl lg:text-5xl text-brand-gold mb-4">🏆</div>
+            <img
+              src={`${basePath}assets/logos/simbolo-branco.svg`}
+              alt="Fruto daVide"
+              className="h-16 w-auto mx-auto mb-4 opacity-80"
+            />
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
               Garantia de Satisfação Total
             </h3>

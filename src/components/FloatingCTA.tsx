@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, X } from "lucide-react";
 
 const FloatingCTA = () => {
+  const basePath = import.meta.env.BASE_URL;
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -23,7 +24,14 @@ const FloatingCTA = () => {
       {isExpanded ? (
         <div className="bg-white rounded-2xl shadow-elegant p-6 max-w-sm animate-scale-in">
           <div className="flex justify-between items-start mb-4">
-            <h4 className="font-semibold text-brand-green">Precisa de ajuda?</h4>
+            <div className="flex items-center gap-2">
+              <img
+                src={`${basePath}assets/logos/simbolo-azul-dourado.svg`}
+                alt=""
+                className="h-6 w-6"
+              />
+              <h4 className="font-semibold text-brand-green">Precisa de ajuda?</h4>
+            </div>
             <button 
               onClick={() => setIsExpanded(false)}
               className="text-brand-gray hover:text-brand-green"

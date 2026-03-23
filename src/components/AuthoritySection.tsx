@@ -38,6 +38,8 @@ const sectors = [
 ];
 
 const AuthoritySection = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -68,8 +70,14 @@ const AuthoritySection = () => {
         {/* Experience + Image */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="fade-in">
-            <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-brand-gold">
+            <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+              <img
+                src={`${basePath}assets/logos/simbolo-branco.svg`}
+                alt=""
+                aria-hidden="true"
+                className="absolute -right-8 -bottom-8 h-48 w-48 opacity-10"
+              />
+              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-brand-gold relative z-10">
                 +44 anos transformando ambientes
               </h3>
               <p className="text-lg lg:text-xl leading-relaxed mb-6 text-white/90">

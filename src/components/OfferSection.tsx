@@ -10,6 +10,8 @@ const offerBenefits = [
 ];
 
 const OfferSection = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -21,8 +23,14 @@ const OfferSection = () => {
           </div>
 
           {/* Main offer */}
-          <div className="bg-gradient-hero rounded-3xl p-8 lg:p-16 text-white mb-12 slide-up">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+          <div className="bg-gradient-hero rounded-3xl p-8 lg:p-16 text-white mb-12 slide-up relative overflow-hidden">
+            <img
+              src={`${basePath}assets/logos/simbolo-branco.svg`}
+              alt=""
+              aria-hidden="true"
+              className="absolute -left-10 -top-10 h-56 w-56 opacity-5"
+            />
+            <h2 className="text-3xl lg:text-5xl font-bold mb-6 relative z-10">
               Agende um{" "}
               <span className="text-brand-gold">Diagnóstico Gratuito</span>{" "}
               do seu projeto agora mesmo
