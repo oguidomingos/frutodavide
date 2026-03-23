@@ -1,15 +1,19 @@
 import { MapPin, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <footer className="bg-brand-green text-white">
       <div className="container-custom py-16">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl font-bold mb-4 text-brand-gold">
-              Fruto daVide
-            </h3>
+            <img
+              src={`${basePath}assets/logos/logo-dourado.svg`}
+              alt="Fruto daVide"
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-white/80 leading-relaxed mb-6 max-w-md">
               Há mais de 44 anos, transformamos ambientes corporativos, hoteleiros e hospitalares 
               com soluções têxteis premium sob medida.

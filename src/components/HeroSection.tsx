@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-hotel-room.jpg";
 
 const HeroSection = () => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
       {/* Background Pattern */}
@@ -14,6 +16,11 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-white fade-in">
             <div className="mb-6">
+              <img
+                src={`${basePath}assets/logos/logo-branco.svg`}
+                alt="Fruto daVide"
+                className="h-14 lg:h-18 w-auto mb-4"
+              />
               <span className="inline-block bg-brand-gold/20 text-brand-gold px-4 py-2 rounded-full text-sm font-medium mb-4">
                 +44 anos de tradição
               </span>
