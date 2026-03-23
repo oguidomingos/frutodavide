@@ -48,17 +48,22 @@ All colors MUST be HSL.
     --brand-gray-light: 20 10% 75%; /* Cinza quente claro */
 
     /* Semantic tokens */
-    --brand-green: 157 70% 14%; /* Verde escuro (#0B3D2E) */
-    --brand-gold: 340 45% 25%; /* Vinho (#5C2336) — accent/CTA */
+    --brand-verde: 157 70% 14%; /* Verde escuro (#0B3D2E) */
+    --brand-vinho: 340 45% 25%; /* Vinho (#5C2336) — accent/CTA */
+    /* Tailwind compatibility (components use text-brand-green, bg-brand-gold) */
+    --brand-green: 157 70% 14%;
+    --brand-gold: 340 45% 25%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(157 70% 14%), hsl(157 60% 18%) 50%, hsl(340 45% 25%));
+    --gradient-vinho: linear-gradient(135deg, hsl(340 45% 25%), hsl(340 40% 40%));
     --gradient-gold: linear-gradient(135deg, hsl(340 45% 25%), hsl(340 40% 40%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(30 20% 95%));
 
     /* Shadows */
     --shadow-elegant: 0 20px 50px -12px hsl(157 70% 14% / 0.15);
     --shadow-card: 0 8px 30px -8px hsl(157 70% 14% / 0.1);
+    --shadow-vinho: 0 8px 25px -8px hsl(340 45% 25% / 0.25);
     --shadow-gold: 0 8px 25px -8px hsl(340 45% 25% / 0.25);
 
     /* Animations */
@@ -88,6 +93,8 @@ All colors MUST be HSL.
 
     --brand-primary: 157 50% 25%;
     --brand-accent: 340 40% 35%;
+    --brand-verde: 157 50% 25%;
+    --brand-vinho: 340 40% 35%;
     --brand-green: 157 50% 25%;
     --brand-gold: 340 40% 35%;
     --gradient-hero: linear-gradient(135deg, hsl(157 40% 8%), hsl(340 30% 15%));
@@ -128,14 +135,14 @@ All colors MUST be HSL.
   
   /* Custom button styles */
   .btn-primary {
-    @apply bg-[hsl(var(--brand-green))] text-white hover:bg-[hsl(var(--brand-gold))] 
+    @apply bg-[hsl(var(--brand-verde))] text-white hover:bg-[hsl(var(--brand-vinho))] 
            px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300
-           shadow-lg hover:shadow-[var(--shadow-gold)] transform hover:-translate-y-0.5;
+           shadow-lg hover:shadow-[var(--shadow-vinho)] transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply border-2 border-[hsl(var(--brand-green))] text-[hsl(var(--brand-green))] 
-           hover:bg-[hsl(var(--brand-green))] hover:text-white
+    @apply border-2 border-[hsl(var(--brand-verde))] text-[hsl(var(--brand-verde))] 
+           hover:bg-[hsl(var(--brand-verde))] hover:text-white
            px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300;
   }
   
