@@ -51,7 +51,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Brand colors - Fúcsia Elegante
+        // Brand colors - Verde & Vinho
         'brand-green': 'hsl(var(--brand-green))',
         'brand-gold': 'hsl(var(--brand-gold))',
         'brand-primary': 'hsl(var(--brand-primary))',
@@ -96,11 +96,11 @@ export default {
           "50%": { transform: "translateY(-10px)" }
         },
         "pulse-gold": {
-          "0%, 100%": { 
-            boxShadow: "0 0 0 0 hsl(340 60% 45% / 0.4)" 
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 hsl(340 45% 25% / 0.4)"
           },
-          "50%": { 
-            boxShadow: "0 0 0 10px hsl(340 60% 45% / 0)" 
+          "50%": {
+            boxShadow: "0 0 0 10px hsl(340 45% 25% / 0)"
           }
         }
       },
