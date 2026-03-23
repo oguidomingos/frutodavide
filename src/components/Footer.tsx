@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <img
-              src={`${basePath}assets/logos/logo-dourado.svg`}
+              src={`${basePath}assets/logos/logo-branco.svg`}
               alt="Fruto daVide"
               className="h-12 w-auto mb-4"
             />

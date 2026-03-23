@@ -54,7 +54,7 @@ const HeroSection = () => {
             </div>
             
             {/* Trust indicators */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-white/20">
               <div className="text-center">
                 <div className="text-2xl lg:text-3xl font-bold text-brand-gold mb-1">200+</div>
                 <div className="text-sm text-white/80">Projetos entregues</div>

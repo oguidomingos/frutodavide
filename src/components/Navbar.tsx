@@ -23,7 +23,7 @@ const Navbar = () => {
         <img
           src={`${basePath}assets/logos/${isScrolled ? 'logo-azul-dourado' : 'logo-branco'}.svg`}
           alt="Fruto daVide"
-          className="h-10 lg:h-12 w-auto transition-all duration-300"
+          className="h-8 sm:h-10 lg:h-12 w-auto max-w-[180px] sm:max-w-[220px] lg:max-w-none transition-all duration-300"
         />
 
         <Button

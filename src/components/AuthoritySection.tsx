@@ -68,7 +68,7 @@ const AuthoritySection = () => {
         </div>
 
         {/* Experience + Image */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-20">
           <div className="fade-in">
             <div className="bg-brand-green rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
               <img
@@ -106,7 +106,7 @@ const AuthoritySection = () => {
             Setores que atendemos
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-8 items-center">
             {sectors.map((sector, index) => (
               <div
                 key={index}

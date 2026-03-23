@@ -12,7 +12,7 @@ const FinalCTASection = () => {
         <div className="text-center mb-16 fade-in">
           <div className="max-w-4xl mx-auto">
             <Quote className="w-16 h-16 text-brand-gold mx-auto mb-8" />
-            <blockquote className="text-3xl lg:text-4xl font-bold text-brand-green leading-tight mb-8">
+            <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-green leading-tight mb-8">
               "Hóspedes não lembram da cortina.{" "}
               <span className="text-brand-gold">
                 Mas lembram quando a luz os acorda às 6h da manhã.
@@ -25,7 +25,7 @@ const FinalCTASection = () => {
         </div>
 
         {/* Main CTA */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
           <div className="slide-up">
             <img 
               src={corporateImage}
