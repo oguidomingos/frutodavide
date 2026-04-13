@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruto Da Vide — Manual de Identidade Visual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul-sereno: #314F73;
+    --dourado-quente: #D4A434;
+    --branco-quente: #F8F5F0;
+    --preto-suave: #1A1A1A;
+    --dourado-claro: #F5E6B8;
+    --cinza-nobre: #94A3B8;
+    --azul-sereno-rgb: 49, 79, 115;
+    --dourado-quente-rgb: 212, 164, 52;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--preto-suave);
+    background: var(--branco-quente);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 500; }
+
+  /* ── Navigation ── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 3rem; height: 72px;
+    background: rgba(248, 245, 240, 0.92);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(49, 79, 115, 0.08);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav.scrolled {
+    height: 60px;
+    box-shadow: 0 4px 30px rgba(49, 79, 115, 0.06);
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--azul-sereno);
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--azul-sereno);
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    position: relative; transition: color 0.3s;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute;
+    bottom: -4px; left: 0; width: 0; height: 1px;
+    background: var(--dourado-quente);
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-links a:hover { color: var(--dourado-quente); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .nav-toggle span {
+    display: block; width: 22px; height: 1.5px;
+    background: var(--azul-sereno); margin: 5px 0;
+    transition: all 0.3s;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative; height: 100vh; min-height: 700px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--azul-sereno); overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(212, 164, 52, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  }
+  .hero-grain {
+    position: absolute; inset: 0; opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; color: #fff;
+  }
+  .hero-line {
+    display: block; overflow: hidden;
+  }
+  .hero-line-inner {
+    display: block;
+    transform: translateY(110%);
+    animation: revealUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-line:nth-child(2) .hero-line-inner { animation-delay: 0.15s; }
+  .hero-line:nth-child(3) .hero-line-inner { animation-delay: 0.3s; }
+  .hero-line:nth-child(4) .hero-line-inner { animation-delay: 0.5s; }
+  .hero-line:nth-child(5) .hero-line-inner { animation-delay: 0.7s; }
+
+  .hero-overline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--dourado-quente); margin-bottom: 2rem;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 400; line-height: 1.05;
+    letter-spacing: -0.01em; margin-bottom: 2rem;
+  }
+  .hero-title em {
+    font-style: italic; color: var(--dourado-quente);
+  }
+  .hero-subtitle {
+    font-size: 0.85rem; font-weight: 300;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    opacity: 0.7; margin-bottom: 1rem;
+  }
+  .hero-version {
+    font-size: 0.7rem; font-weight: 400;
+    letter-spacing: 0.15em; opacity: 0.4;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 3rem;
+    left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.5rem; cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+  }
+  .hero-scroll span {
+    font-size: 0.6rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+  }
+  .hero-scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, var(--dourado-quente), transparent);
+  }
+
+  @keyframes revealUp {
+    to { transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ── Sections ── */
+  .section {
+    padding: 8rem 2rem;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .section--full {
+    max-width: 100%; padding: 8rem 0;
+  }
+  .section--dark {
+    background: var(--preto-suave); color: #fff;
+  }
+  .section--blue {
+    background: var(--azul-sereno); color: #fff;
+  }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--dourado-quente); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 40px; height: 1px;
+    background: var(--dourado-quente);
+  }
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400; line-height: 1.15;
+    margin-bottom: 2rem; max-width: 700px;
+  }
+  .section-text {
+    font-size: 1.05rem; font-weight: 300;
+    line-height: 1.9; max-width: 620px;
+    color: var(--cinza-nobre);
+  }
+  .section--dark .section-text,
+  .section--blue .section-text { color: rgba(255,255,255,0.6); }
+
+  /* ── Reveal Animation ── */
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── Divider ── */
+  .divider {
+    display: flex; align-items: center; justify-content: center;
+    padding: 3rem 2rem; gap: 1.5rem;
+  }
+  .divider-line { flex: 1; max-width: 120px; height: 1px; background: rgba(49,79,115,0.12); }
+  .divider-diamond {
+    width: 6px; height: 6px;
+    border: 1px solid var(--dourado-quente);
+    transform: rotate(45deg);
+  }
+
+  /* ── Sobre ── */
+  .sobre-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6rem; align-items: center; margin-top: 4rem;
+  }
+  .sobre-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(5rem, 10vw, 9rem);
+    font-weight: 400; color: var(--azul-sereno);
+    line-height: 1; margin-bottom: 0.5rem;
+  }
+  .sobre-number-label {
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--dourado-quente);
+  }
+  .sobre-values {
+    display: flex; flex-direction: column; gap: 1.5rem; margin-top: 3rem;
+  }
+  .sobre-value {
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .sobre-value-icon {
+    width: 32px; height: 32px; flex-shrink: 0;
+    border: 1px solid var(--dourado-quente);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; color: var(--dourado-quente);
+    margin-top: 2px;
+  }
+  .sobre-value h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.05em; margin-bottom: 0.3rem;
+  }
+  .sobre-value p {
+    font-size: 0.9rem; font-weight: 300;
+    line-height: 1.7; color: var(--cinza-nobre);
+  }
+
+  /* ── Conceito ── */
+  .conceito-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6rem; align-items: center;
+  }
+  .conceito-symbol {
+    display: flex; align-items: center; justify-content: center;
+    aspect-ratio: 1; border-radius: 50%;
+    border: 1px solid rgba(212, 164, 52, 0.2);
+    position: relative;
+  }
+  .conceito-symbol::before {
+    content: ''; position: absolute; inset: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 164, 52, 0.1);
+  }
+  .conceito-symbol svg {
+    width: 40%; height: 40%; opacity: 0.9;
+  }
+  .conceito-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-style: italic;
+    line-height: 1.7; color: rgba(255,255,255,0.85);
+    margin-top: 3rem; padding-left: 1.5rem;
+    border-left: 2px solid var(--dourado-quente);
+  }
+
+  /* ── Logotipo Grid ── */
+  .logo-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; margin-top: 4rem;
+  }
+  .logo-card {
+    aspect-ratio: 4/3;
+    border-radius: 12px; overflow: hidden;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative; padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .logo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(49, 79, 115, 0.12);
+  }
+  .logo-card--light { background: var(--branco-quente); border: 1px solid rgba(49,79,115,0.08); }
+  .logo-card--dark { background: var(--preto-suave); }
+  .logo-card--blue { background: var(--azul-sereno); }
+  .logo-card img {
+    max-width: 65%; max-height: 55%;
+    object-fit: contain;
+  }
+  .logo-card-label {
+    position: absolute; bottom: 1.2rem;
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .logo-card--light .logo-card-label { color: var(--cinza-nobre); }
+  .logo-card--dark .logo-card-label { color: rgba(255,255,255,0.4); }
+  .logo-card--blue .logo-card-label { color: rgba(255,255,255,0.4); }
+
+  /* ── Area de Protecao ── */
+  .protecao-demo {
+    margin-top: 4rem;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4rem 2rem;
+  }
+  .protecao-box {
+    position: relative;
+    width: 320px; height: 240px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px dashed var(--dourado-quente);
+  }
+  .protecao-box::before, .protecao-box::after {
+    position: absolute; font-size: 0.6rem;
+    font-weight: 500; letter-spacing: 0.1em;
+    color: var(--dourado-quente);
+  }
+  .protecao-box::before {
+    content: 'F'; top: 50%; right: -30px;
+    transform: translateY(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+  }
+  .protecao-box::after {
+    content: 'F'; left: 50%; bottom: -30px;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+  }
+  .protecao-inner {
+    width: 60%; height: 60%;
+    border: 1px solid rgba(49,79,115,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; color: var(--azul-sereno);
+    letter-spacing: 0.05em;
+  }
+  .protecao-arrows {
+    position: absolute;
+    border: 0; background: none;
+  }
+  .protecao-desc {
+    max-width: 500px; margin: 3rem auto 0;
+    text-align: center;
+    font-size: 0.95rem; line-height: 1.8;
+    color: var(--cinza-nobre);
+  }
+
+  /* ── Paleta ── */
+  .paleta-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 4rem;
+  }
+  .swatch {
+    border-radius: 16px; overflow: hidden;
+    cursor: pointer; position: relative;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .swatch:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .swatch-color {
+    height: 180px;
+    display: flex; align-items: flex-end; justify-content: flex-start;
+    padding: 1.2rem;
+  }
+  .swatch-info {
+    padding: 1.2rem;
+    background: #fff;
+  }
+  .swatch-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 500;
+    margin-bottom: 0.5rem; color: var(--preto-suave);
+  }
+  .swatch-hex {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.1em; color: var(--cinza-nobre);
+    margin-bottom: 0.2rem;
+  }
+  .swatch-rgb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem; font-weight: 400;
+    color: var(--cinza-nobre); opacity: 0.7;
+  }
+  .swatch-toast {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: var(--preto-suave); color: #fff;
+    padding: 0.5rem 1rem; border-radius: 6px;
+    font-size: 0.7rem; letter-spacing: 0.1em;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .swatch-toast.show {
+    opacity: 1; transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* ── Tipografia ── */
+  .tipo-showcase { margin-top: 4rem; }
+  .tipo-font {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(49,79,115,0.08);
+  }
+  .tipo-font:last-child { border-bottom: none; }
+  .tipo-font-name {
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--dourado-quente); margin-bottom: 1.5rem;
+  }
+  .tipo-sample-playfair {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400; line-height: 1.2;
+    color: var(--azul-sereno); margin-bottom: 1.5rem;
+  }
+  .tipo-sample-montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300; line-height: 1.3;
+    color: var(--azul-sereno); margin-bottom: 1.5rem;
+  }
+  .tipo-alphabet {
+    font-size: 1.1rem; line-height: 2;
+    color: var(--cinza-nobre); letter-spacing: 0.05em;
+  }
+  .tipo-weights {
+    display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;
+  }
+  .tipo-weight {
+    display: flex; flex-direction: column; gap: 0.3rem;
+  }
+  .tipo-weight-name {
+    font-size: 0.65rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--cinza-nobre);
+  }
+  .tipo-weight-sample {
+    font-size: 1.8rem; color: var(--azul-sereno);
+  }
+  .tipo-hierarchy {
+    margin-top: 4rem;
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .tipo-row {
+    display: flex; align-items: baseline; gap: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(49,79,115,0.06);
+  }
+  .tipo-row-label {
+    flex-shrink: 0; width: 80px;
+    font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--cinza-nobre);
+  }
+  .tipo-row-size {
+    flex-shrink: 0; width: 80px;
+    font-size: 0.7rem; font-weight: 400;
+    color: var(--dourado-quente);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── Aplicacoes ── */
+  .app-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; margin-top: 4rem;
+  }
+  .app-card {
+    aspect-ratio: 4/3; border-radius: 16px;
+    overflow: hidden; position: relative;
+    display: flex; align-items: flex-end;
+    padding: 2rem;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .app-card:hover { transform: scale(1.02); }
+  .app-card--1 {
+    background: linear-gradient(135deg, var(--azul-sereno), #1e3450);
+  }
+  .app-card--2 {
+    background: linear-gradient(135deg, var(--branco-quente), #e8e2d8);
+    color: var(--preto-suave);
+  }
+  .app-card--3 {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  }
+  .app-card--4 {
+    background: linear-gradient(135deg, var(--dourado-quente), #b88a1e);
+  }
+  .app-card--5 {
+    background: linear-gradient(135deg, var(--azul-sereno), var(--dourado-quente));
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+  }
+  .app-card-content { position: relative; z-index: 2; color: #fff; }
+  .app-card--2 .app-card-content { color: var(--preto-suave); }
+  .app-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .app-card-desc {
+    font-size: 0.75rem; font-weight: 300;
+    letter-spacing: 0.05em; opacity: 0.7;
+  }
+  .app-card-mockup {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.06;
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem; font-weight: 400;
+    color: #fff;
+  }
+  .app-card--2 .app-card-mockup { color: var(--azul-sereno); }
+
+  /* ── Proibidos ── */
+  .proibidos-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; margin-top: 4rem;
+  }
+  .proibido-card {
+    aspect-ratio: 1;
+    border: 1px solid rgba(49,79,115,0.08);
+    border-radius: 12px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem; padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+  .proibido-card:hover { border-color: #c0392b; }
+  .proibido-x {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 28px; height: 28px;
+    border-radius: 50%; background: #c0392b;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 0.8rem; font-weight: 700;
+  }
+  .proibido-visual {
+    width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: var(--azul-sereno);
+    border: 1px solid rgba(49,79,115,0.1);
+    border-radius: 8px;
+  }
+  .proibido-visual--stretched { transform: scaleX(1.5); }
+  .proibido-visual--rotated { transform: rotate(25deg); }
+  .proibido-visual--shadow { text-shadow: 4px 4px 0 rgba(0,0,0,0.3); }
+  .proibido-visual--recolored { color: #e74c3c; }
+  .proibido-visual--outlined {
+    color: transparent; -webkit-text-stroke: 1px var(--azul-sereno);
+  }
+  .proibido-visual--lowcontrast { opacity: 0.2; }
+  .proibido-label {
+    font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.05em; text-align: center;
+    color: var(--cinza-nobre);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--preto-suave); color: #fff;
+    padding: 6rem 2rem 3rem;
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 4rem;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .footer-tagline {
+    font-size: 0.85rem; font-weight: 300;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.7; max-width: 320px;
+  }
+  .footer-col h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--dourado-quente); margin-bottom: 1.2rem;
+  }
+  .footer-col p, .footer-col a {
+    font-size: 0.85rem; font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none; display: block;
+    line-height: 2;
+  }
+  .footer-col a:hover { color: var(--dourado-quente); }
+  .footer-bottom {
+    max-width: 1200px; margin: 4rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between;
+    font-size: 0.7rem; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: rgba(248, 245, 240, 0.98);
+      backdrop-filter: blur(20px);
+      padding: 2rem; gap: 1.5rem;
+      border-bottom: 1px solid rgba(49,79,115,0.08);
+    }
+    .nav-toggle { display: block; }
+    .section { padding: 5rem 1.5rem; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .conceito-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0 1.5rem; }
+    .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .paleta-grid { grid-template-columns: repeat(2, 1fr); }
+    .app-grid { grid-template-columns: 1fr; }
+    .app-card--5 { grid-column: span 1; aspect-ratio: 4/3; }
+    .proibidos-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { flex-direction: column; gap: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; }
+  }
+
+  @media (max-width: 480px) {
+    .logo-grid { grid-template-columns: 1fr; }
+    .paleta-grid { grid-template-columns: 1fr; }
+    .proibidos-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">Fruto Da Vide</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#conceito">Conceito</a></li>
+    <li><a href="#logotipo">Logotipo</a></li>
+    <li><a href="#paleta">Paleta</a></li>
+    <li><a href="#tipografia">Tipografia</a></li>
+    <li><a href="#aplicacoes">Aplicações</a></li>
+    <li><a href="#proibidos">Restrições</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="hero-line">
+      <span class="hero-line-inner hero-overline">Manual de Identidade Visual</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-line">
+        <span class="hero-line-inner">Fruto</span>
+      </span>
+      <span class="hero-line">
+        <span class="hero-line-inner"><em>Da Vide</em></span>
+      </span>
+    </h1>
+    <div class="hero-line">
+      <span class="hero-line-inner hero-subtitle">Soluções Têxteis Premium</span>
+    </div>
+    <div class="hero-line">
+      <span class="hero-line-inner hero-version">Versão 2.0 — Março 2026</span>
+    </div>
+  </div>
+  <a href="#sobre" class="hero-scroll">
+    <span>Explorar</span>
+    <div class="hero-scroll-line"></div>
+  </a>
+</section>
+
+<!-- Sobre a Marca -->
+<section class="section" id="sobre">
+  <div class="reveal">
+    <div class="section-label">01 — Sobre a Marca</div>
+    <h2 class="section-title">Mais de 44 anos tecendo<br>excelência e confiança</h2>
+  </div>
+  <div class="sobre-grid">
+    <div class="reveal reveal-delay-1">
+      <div class="sobre-number">44<span style="font-size:0.4em;vertical-align:super;color:var(--dourado-quente)">+</span></div>
+      <div class="sobre-number-label">Anos de história</div>
+      <p class="section-text" style="margin-top:2rem;">
+        A Fruto Da Vide nasceu da convicção de que o conforto e a qualidade dos têxteis
+        transformam ambientes e experiências. Há mais de quatro décadas, fornecemos
+        soluções têxteis premium para os setores de hotelaria e saúde, unindo tradição
+        artesanal à inovação industrial.
+      </p>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="sobre-values">
+        <div class="sobre-value">
+          <div class="sobre-value-icon">&#9670;</div>
+          <div>
+            <h4>Excelência</h4>
+            <p>Cada fio, cada trama, cada acabamento reflete nosso compromisso inabalável com a qualidade superior.</p>
+          </div>
+        </div>
+        <div class="sobre-value">
+          <div class="sobre-value-icon">&#9670;</div>
+          <div>
+            <h4>Confiança</h4>
+            <p>Relações duradouras com hotéis e instituições de saúde construídas sobre décadas de entregas consistentes.</p>
+          </div>
+        </div>
+        <div class="sobre-value">
+          <div class="sobre-value-icon">&#9670;</div>
+          <div>
+            <h4>Inovação</h4>
+            <p>Tecnologia têxtil de ponta aliada à sustentabilidade e ao respeito pelo meio ambiente.</p>
+          </div>
+        </div>
+        <div class="sobre-value">
+          <div class="sobre-value-icon">&#9670;</div>
+          <div>
+            <h4>Tradição</h4>
+            <p>Quatro décadas de conhecimento acumulado que garantem processos refinados e resultados impecáveis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Conceito -->
+<section class="section--full section--blue" id="conceito">
+  <div class="conceito-inner">
+    <div class="reveal">
+      <div class="conceito-symbol">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" stroke="#D4A434" stroke-width="0.5" opacity="0.6"/>
+          <path d="M50 20 C50 20 35 35 35 55 C35 65 42 75 50 80 C58 75 65 65 65 55 C65 35 50 20 50 20Z" stroke="#D4A434" stroke-width="1" fill="none"/>
+          <path d="M50 35 C45 45 43 52 43 58 C43 64 46 70 50 73 C54 70 57 64 57 58 C57 52 55 45 50 35Z" fill="#D4A434" opacity="0.15"/>
+          <line x1="50" y1="45" x2="50" y2="75" stroke="#D4A434" stroke-width="0.5" opacity="0.5"/>
+          <path d="M50 52 C46 48 42 50 40 52" stroke="#D4A434" stroke-width="0.5" fill="none" opacity="0.5"/>
+          <path d="M50 58 C54 54 58 56 60 58" stroke="#D4A434" stroke-width="0.5" fill="none" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="section-label">02 — Conceito</div>
+      <h2 class="section-title" style="color:#fff">A vide como símbolo de<br>crescimento perene</h2>
+      <p class="section-text">
+        O nome "Fruto Da Vide" evoca a videira — planta que, com raízes profundas e
+        ramos persistentes, produz frutos de excelência geração após geração. O símbolo
+        da folha e da vide dentro de um círculo representa a continuidade, a proteção
+        e o ciclo virtuoso da qualidade.
+      </p>
+      <p class="section-text" style="margin-top:1.5rem;">
+        O círculo traduz totalidade e cuidado envolvente — os mesmos valores que
+        aplicamos em cada peça têxtil entregue aos nossos parceiros. A vide é força
+        silenciosa: cresce sem pressa, mas com propósito inabalável.
+      </p>
+      <blockquote class="conceito-quote">
+        "Da raiz ao fruto, cada detalhe importa."
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Logotipo -->
+<section class="section" id="logotipo">
+  <div class="reveal">
+    <div class="section-label">03 — Logotipo</div>
+    <h2 class="section-title">Variações do logotipo</h2>
+    <p class="section-text">
+      O logotipo possui seis variações oficiais para garantir versatilidade e legibilidade em diferentes contextos e fundos.
+    </p>
+  </div>
+  <div class="logo-grid">
+    <div class="logo-card logo-card--light reveal reveal-delay-1">
+      <img src="variations/logo-principal-azul-dourado.png" alt="Logo Principal — Azul e Dourado">
+      <span class="logo-card-label">Principal — Azul + Dourado</span>
+    </div>
+    <div class="logo-card logo-card--light reveal reveal-delay-2">
+      <img src="variations/logo-monocromatico-azul.png" alt="Logo Monocromático Azul Sereno">
+      <span class="logo-card-label">Monocromático Azul</span>
+    </div>
+    <div class="logo-card logo-card--light reveal reveal-delay-3">
+      <img src="variations/logo-monocromatico-preto.png" alt="Logo Monocromático Preto">
+      <span class="logo-card-label">Monocromático Preto</span>
+    </div>
+    <div class="logo-card logo-card--dark reveal reveal-delay-1">
+      <img src="variations/logo-negativa-branco.png" alt="Logo Negativa Branco">
+      <span class="logo-card-label">Negativa — Branco</span>
+    </div>
+    <div class="logo-card logo-card--light reveal reveal-delay-2">
+      <img src="variations/logo-monocromatico-dourado.png" alt="Logo Monocromático Dourado">
+      <span class="logo-card-label">Monocromático Dourado</span>
+    </div>
+    <div class="logo-card logo-card--blue reveal reveal-delay-3">
+      <img src="variations/logo-azul-branco.png" alt="Logo Azul e Branco sobre fundo escuro">
+      <span class="logo-card-label">Azul + Branco</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Area de Protecao -->
+<section class="section" id="protecao">
+  <div class="reveal">
+    <div class="section-label">04 — Área de Proteção</div>
+    <h2 class="section-title">Respiro e integridade visual</h2>
+    <p class="section-text">
+      A área de proteção garante que o logotipo mantenha sua presença e legibilidade.
+      A unidade de medida é a altura da letra "F" do logotipo — essa distância mínima
+      deve ser respeitada em todos os lados.
+    </p>
+  </div>
+  <div class="protecao-demo reveal reveal-delay-1">
+    <div class="protecao-box">
+      <div class="protecao-inner">FdV</div>
+    </div>
+  </div>
+  <p class="protecao-desc reveal reveal-delay-2">
+    A margem de segurança equivalente à altura da letra <strong style="font-family:'Playfair Display',serif;color:var(--azul-sereno)">F</strong>
+    deve ser aplicada ao redor de todo o logotipo. Nenhum elemento gráfico, textual ou fotográfico deve invadir essa área.
+  </p>
+</section>
+
+<!-- Paleta de Cores -->
+<section class="section" id="paleta">
+  <div class="reveal">
+    <div class="section-label">05 — Paleta de Cores</div>
+    <h2 class="section-title">Cores que traduzem<br>sofisticação e acolhimento</h2>
+    <p class="section-text">
+      A paleta combina a serenidade do azul institucional com o calor do dourado, criando uma identidade que transmite confiança, elegância e proximidade.
+    </p>
+  </div>
+  <div class="paleta-grid">
+    <div class="swatch reveal reveal-delay-1" onclick="copyHex('#314F73', this)">
+      <div class="swatch-color" style="background:#314F73"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Azul Sereno</div>
+        <div class="swatch-hex">HEX #314F73</div>
+        <div class="swatch-rgb">RGB 49, 79, 115</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+    <div class="swatch reveal reveal-delay-2" onclick="copyHex('#D4A434', this)">
+      <div class="swatch-color" style="background:#D4A434"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dourado Quente</div>
+        <div class="swatch-hex">HEX #D4A434</div>
+        <div class="swatch-rgb">RGB 212, 164, 52</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+    <div class="swatch reveal reveal-delay-3" onclick="copyHex('#F8F5F0', this)">
+      <div class="swatch-color" style="background:#F8F5F0; border: 1px solid rgba(49,79,115,0.08)"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Branco Quente</div>
+        <div class="swatch-hex">HEX #F8F5F0</div>
+        <div class="swatch-rgb">RGB 248, 245, 240</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+    <div class="swatch reveal reveal-delay-1" onclick="copyHex('#1A1A1A', this)">
+      <div class="swatch-color" style="background:#1A1A1A"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Preto Suave</div>
+        <div class="swatch-hex">HEX #1A1A1A</div>
+        <div class="swatch-rgb">RGB 26, 26, 26</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+    <div class="swatch reveal reveal-delay-2" onclick="copyHex('#F5E6B8', this)">
+      <div class="swatch-color" style="background:#F5E6B8"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Dourado Claro</div>
+        <div class="swatch-hex">HEX #F5E6B8</div>
+        <div class="swatch-rgb">RGB 245, 230, 184</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+    <div class="swatch reveal reveal-delay-3" onclick="copyHex('#94A3B8', this)">
+      <div class="swatch-color" style="background:#94A3B8"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Cinza Nobre</div>
+        <div class="swatch-hex">HEX #94A3B8</div>
+        <div class="swatch-rgb">RGB 148, 163, 184</div>
+      </div>
+      <div class="swatch-toast">Copiado!</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+
+<!-- Tipografia -->
+<section class="section" id="tipografia">
+  <div class="reveal">
+    <div class="section-label">06 — Tipografia</div>
+    <h2 class="section-title">Tipografia que equilibra<br>tradição e modernidade</h2>
+  </div>
+  <div class="tipo-showcase">
+    <div class="tipo-font reveal">
+      <div class="tipo-font-name">Fonte Primária — Títulos</div>
+      <div class="tipo-sample-playfair">Playfair Display</div>
+      <div class="tipo-alphabet" style="font-family:'Playfair Display',serif;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+        abcdefghijklmnopqrstuvwxyz<br>
+        0123456789 &amp; ? ! @ #
+      </div>
+      <div class="tipo-weights">
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">Regular 400</span>
+          <span class="tipo-weight-sample" style="font-family:'Playfair Display',serif;font-weight:400;">Fruto Da Vide</span>
+        </div>
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">Medium 500</span>
+          <span class="tipo-weight-sample" style="font-family:'Playfair Display',serif;font-weight:500;">Fruto Da Vide</span>
+        </div>
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">Bold 700</span>
+          <span class="tipo-weight-sample" style="font-family:'Playfair Display',serif;font-weight:700;">Fruto Da Vide</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tipo-font reveal reveal-delay-1">
+      <div class="tipo-font-name">Fonte Secundária — Corpo de Texto</div>
+      <div class="tipo-sample-montserrat">Montserrat</div>
+      <div class="tipo-alphabet" style="font-family:'Montserrat',sans-serif;">
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+        abcdefghijklmnopqrstuvwxyz<br>
+        0123456789 &amp; ? ! @ #
+      </div>
+      <div class="tipo-weights">
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">Light 300</span>
+          <span class="tipo-weight-sample" style="font-family:'Montserrat',sans-serif;font-weight:300;">Fruto Da Vide</span>
+        </div>
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">Regular 400</span>
+          <span class="tipo-weight-sample" style="font-family:'Montserrat',sans-serif;font-weight:400;">Fruto Da Vide</span>
+        </div>
+        <div class="tipo-weight">
+          <span class="tipo-weight-name">SemiBold 600</span>
+          <span class="tipo-weight-sample" style="font-family:'Montserrat',sans-serif;font-weight:600;">Fruto Da Vide</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-2">
+      <div class="tipo-font-name" style="margin-bottom:1.5rem;">Hierarquia Tipográfica</div>
+      <div class="tipo-hierarchy">
+        <div class="tipo-row">
+          <span class="tipo-row-label">H1</span>
+          <span class="tipo-row-size">48 — 72px</span>
+          <span style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:var(--azul-sereno);">Título Principal</span>
+        </div>
+        <div class="tipo-row">
+          <span class="tipo-row-label">H2</span>
+          <span class="tipo-row-size">32 — 48px</span>
+          <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:var(--azul-sereno);">Título de Seção</span>
+        </div>
+        <div class="tipo-row">
+          <span class="tipo-row-label">H3</span>
+          <span class="tipo-row-size">24 — 32px</span>
+          <span style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:500;color:var(--azul-sereno);">Subtítulo</span>
+        </div>
+        <div class="tipo-row">
+          <span class="tipo-row-label">Body</span>
+          <span class="tipo-row-size">16 — 18px</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:300;color:var(--cinza-nobre);">Texto de corpo — legível e elegante</span>
+        </div>
+        <div class="tipo-row">
+          <span class="tipo-row-label">Caption</span>
+          <span class="tipo-row-size">11 — 13px</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cinza-nobre);">Rótulos e legendas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aplicacoes -->
+<section class="section--full section--dark" id="aplicacoes" style="padding-left:2rem;padding-right:2rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal">
+      <div class="section-label">07 — Aplicações</div>
+      <h2 class="section-title" style="color:#fff;">A marca no mundo real</h2>
+      <p class="section-text">
+        Exemplos de como a identidade visual se materializa em pontos de contato físicos e digitais.
+      </p>
+    </div>
+    <div class="app-grid">
+      <div class="app-card app-card--1 reveal reveal-delay-1">
+        <div class="app-card-mockup">FdV</div>
+        <div class="app-card-content">
+          <div class="app-card-title">Cartão de Visita</div>
+          <div class="app-card-desc">Frente e verso, papel toque de algodão 350g, dourado hot stamping</div>
+        </div>
+      </div>
+      <div class="app-card app-card--2 reveal reveal-delay-2">
+        <div class="app-card-mockup">FdV</div>
+        <div class="app-card-content">
+          <div class="app-card-title">Papelaria Corporativa</div>
+          <div class="app-card-desc">Envelope, papel timbrado, pasta, bloco de notas</div>
+        </div>
+      </div>
+      <div class="app-card app-card--3 reveal reveal-delay-1">
+        <div class="app-card-mockup">FdV</div>
+        <div class="app-card-content">
+          <div class="app-card-title">Uniformes</div>
+          <div class="app-card-desc">Bordado no peito, tag na manga, elegância discreta</div>
+        </div>
+      </div>
+      <div class="app-card app-card--4 reveal reveal-delay-2">
+        <div class="app-card-mockup">FdV</div>
+        <div class="app-card-content" style="color:#fff;">
+          <div class="app-card-title">Embalagens</div>
+          <div class="app-card-desc">Caixas, sacolas e tags com acabamento premium</div>
+        </div>
+      </div>
+      <div class="app-card app-card--5 reveal reveal-delay-1">
+        <div class="app-card-mockup" style="font-size:8rem;">FdV</div>
+        <div class="app-card-content">
+          <div class="app-card-title">Amenities de Hotel</div>
+          <div class="app-card-desc">Toalhas, roupões, lençóis e kits de amenidades com a identidade Fruto Da Vide bordada</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Usos Proibidos -->
+<section class="section" id="proibidos">
+  <div class="reveal">
+    <div class="section-label">08 — Usos Proibidos</div>
+    <h2 class="section-title">O que nunca deve ser feito</h2>
+    <p class="section-text">
+      Para preservar a integridade da marca, as seguintes alterações são estritamente proibidas em qualquer circunstância.
+    </p>
+  </div>
+  <div class="proibidos-grid">
+    <div class="proibido-card reveal reveal-delay-1">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--stretched">FdV</div>
+      <div class="proibido-label">Distorcer ou esticar<br>o logotipo</div>
+    </div>
+    <div class="proibido-card reveal reveal-delay-2">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--rotated">FdV</div>
+      <div class="proibido-label">Rotacionar em<br>ângulos arbitrários</div>
+    </div>
+    <div class="proibido-card reveal reveal-delay-3">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--shadow">FdV</div>
+      <div class="proibido-label">Aplicar sombras<br>ou efeitos 3D</div>
+    </div>
+    <div class="proibido-card reveal reveal-delay-1">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--recolored">FdV</div>
+      <div class="proibido-label">Alterar as cores<br>da paleta oficial</div>
+    </div>
+    <div class="proibido-card reveal reveal-delay-2">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--outlined">FdV</div>
+      <div class="proibido-label">Usar apenas contorno<br>sem preenchimento</div>
+    </div>
+    <div class="proibido-card reveal reveal-delay-3">
+      <div class="proibido-x">&#10005;</div>
+      <div class="proibido-visual proibido-visual--lowcontrast">FdV</div>
+      <div class="proibido-label">Aplicar em fundo<br>de baixo contraste</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer / Contato -->
+<footer class="footer" id="contato">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Fruto Da Vide</div>
+      <p class="footer-tagline">
+        Soluções têxteis premium para hotelaria e saúde.<br>
+        Mais de 44 anos de excelência, confiança e inovação.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h5>Manual</h5>
+      <a href="#sobre">Sobre a Marca</a>
+      <a href="#conceito">Conceito</a>
+      <a href="#logotipo">Logotipo</a>
+      <a href="#paleta">Paleta de Cores</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#aplicacoes">Aplicações</a>
+      <a href="#proibidos">Restrições</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <p>contato@frutodavide.com.br</p>
+      <p>+55 (XX) XXXX-XXXX</p>
+      <p>frutodavide.com.br</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Fruto Da Vide. Todos os direitos reservados.</span>
+    <span>Manual de Identidade Visual v2.0</span>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── Navigation scroll effect ──
+  const nav = document.getElementById('nav');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', function() {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 80);
+    lastScroll = y;
+  }, { passive: true });
+
+  // ── Mobile toggle ──
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', function() {
+    links.classList.toggle('open');
+    const spans = toggle.querySelectorAll('span');
+    if (links.classList.contains('open')) {
+      spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+  });
+
+  // Close mobile menu on link click
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      const spans = toggle.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    });
+  });
+
+  // ── Reveal on scroll (IntersectionObserver) ──
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -60px 0px'
+  });
+
+  reveals.forEach(function(el) { observer.observe(el); });
+
+  // ── Parallax on hero ──
+  var heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY;
+    if (y < window.innerHeight) {
+      heroBg.style.transform = 'translateY(' + (y * 0.3) + 'px)';
+    }
+  }, { passive: true });
+
+  // ── Active nav link highlight ──
+  var sections = document.querySelectorAll('section[id], .section--full[id], footer[id]');
+  var navAnchors = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', function() {
+    var scrollPos = window.scrollY + 150;
+    sections.forEach(function(sec) {
+      if (sec.offsetTop <= scrollPos && sec.offsetTop + sec.offsetHeight > scrollPos) {
+        var id = sec.getAttribute('id');
+        navAnchors.forEach(function(a) {
+          a.style.color = '';
+          if (a.getAttribute('href') === '#' + id) {
+            a.style.color = 'var(--dourado-quente)';
+          }
+        });
+      }
+    });
+  }, { passive: true });
+
+})();
+
+// ── Copy hex to clipboard ──
+function copyHex(hex, el) {
+  navigator.clipboard.writeText(hex).then(function() {
+    var toast = el.querySelector('.swatch-toast');
+    toast.classList.add('show');
+    setTimeout(function() {
+      toast.classList.remove('show');
+    }, 1500);
+  }).catch(function() {
+    // Fallback
+    var ta = document.createElement('textarea');
+    ta.value = hex;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    var toast = el.querySelector('.swatch-toast');
+    toast.classList.add('show');
+    setTimeout(function() {
+      toast.classList.remove('show');
+    }, 1500);
+  });
+}
+</script>
+</body>
+</html>
