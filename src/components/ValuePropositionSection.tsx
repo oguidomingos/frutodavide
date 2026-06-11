@@ -1,4 +1,5 @@
 import { Palette, Cog, Shield, HeadphonesIcon } from "lucide-react";
+import { whatsappUrl } from "@/lib/contact";
 
 const valueProps = [
   {
@@ -84,9 +85,14 @@ const ValuePropositionSection = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Agende uma conversa gratuita e descubra como podemos transformar seu projeto.
             </p>
-            <button className="btn-primary bg-brand-gold hover:bg-white hover:text-brand-green">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex bg-brand-gold hover:bg-white hover:text-brand-green"
+            >
               Agendar consultoria gratuita
-            </button>
+            </a>
           </div>
         </div>
       </div>

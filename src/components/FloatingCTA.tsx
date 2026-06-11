@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { MessageCircle, X } from "lucide-react";
+import { contactPhoneDisplay, whatsappUrl } from "@/lib/contact";
 
 const FloatingCTA = () => {
   const basePath = import.meta.env.BASE_URL;
@@ -45,15 +46,14 @@ const FloatingCTA = () => {
           </p>
           
           <div className="space-y-2">
-            <Button 
-              size="sm" 
-              className="w-full btn-primary text-sm py-2"
-            >
-              Diagnóstico Gratuito
+            <Button asChild size="sm" className="w-full btn-primary text-sm py-2">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Diagnóstico Gratuito
+              </a>
             </Button>
             
             <a
-              href="https://www.instagram.com/frutodavide"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full"
@@ -64,7 +64,7 @@ const FloatingCTA = () => {
                 className="w-full text-sm py-2"
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
-                Instagram
+                WhatsApp {contactPhoneDisplay}
               </Button>
             </a>
           </div>

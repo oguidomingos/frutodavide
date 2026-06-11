@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { whatsappUrl } from "@/lib/contact";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,11 +27,10 @@ const Navbar = () => {
           className="h-8 sm:h-10 lg:h-12 w-auto max-w-[180px] sm:max-w-[220px] lg:max-w-none transition-all duration-300"
         />
 
-        <Button
-          size="sm"
-          className="btn-primary transition-all duration-300"
-        >
-          Fale conosco
+        <Button asChild size="sm" className="btn-primary transition-all duration-300">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            Fale conosco
+          </a>
         </Button>
       </div>
     </nav>

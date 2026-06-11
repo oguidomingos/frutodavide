@@ -1,4 +1,5 @@
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail, Clock, MessageCircle } from "lucide-react";
+import { contactEmail, contactPhoneDisplay, whatsappUrl } from "@/lib/contact";
 
 const Footer = () => {
   const basePath = import.meta.env.BASE_URL;
@@ -21,16 +22,16 @@ const Footer = () => {
             
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/frutodavide"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300"
-                aria-label="Instagram da Fruto daVide"
+                aria-label="WhatsApp da Fruto daVide"
               >
-                <span className="font-bold">ig</span>
+                <MessageCircle className="h-5 w-5" />
               </a>
               <a
-                href="mailto:frutodavide.comercial@gmail.com"
+                href={`mailto:${contactEmail}`}
                 className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center hover:bg-brand-gold transition-colors duration-300"
                 aria-label="E-mail da Fruto daVide"
               >
@@ -46,8 +47,8 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
                 <div>
-                  <a href="mailto:frutodavide.comercial@gmail.com" className="text-white/90 hover:text-brand-gold transition-colors">
-                    frutodavide.comercial@gmail.com
+                  <a href={`mailto:${contactEmail}`} className="text-white/90 hover:text-brand-gold transition-colors">
+                    {contactEmail}
                   </a>
                   <div className="text-white/60 text-sm">Resposta em 24h</div>
                 </div>
@@ -56,8 +57,15 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-gold flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-white/90">São Paulo - SP</div>
-                  <div className="text-white/60 text-sm">Atendemos todo Brasil</div>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/90 hover:text-brand-gold transition-colors"
+                  >
+                    WhatsApp {contactPhoneDisplay}
+                  </a>
+                  <div className="text-white/60 text-sm">Atendimento direto da loja</div>
                 </div>
               </div>
             </div>

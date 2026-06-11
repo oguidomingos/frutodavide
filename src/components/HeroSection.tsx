@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-hotel-room.jpg";
+import { whatsappUrl } from "@/lib/contact";
 
 const HeroSection = () => {
   const basePath = import.meta.env.BASE_URL;
@@ -37,19 +38,21 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                size="lg" 
-                className="btn-primary text-lg px-8 py-4 animate-pulse-gold"
-              >
-                Quero meu diagnóstico gratuito
+              <Button asChild size="lg" className="btn-primary text-lg px-8 py-4 animate-pulse-gold">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Quero meu diagnóstico gratuito
+                </a>
               </Button>
               
-              <Button 
-                variant="outline" 
+              <Button
+                asChild
+                variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-brand-green text-lg px-8 py-4"
               >
-                Ver nossos projetos
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Ver nossos projetos
+                </a>
               </Button>
             </div>
             

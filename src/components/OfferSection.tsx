@@ -1,5 +1,6 @@
 import { Clock, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { whatsappUrl } from "@/lib/contact";
 
 const offerBenefits = [
   "Análise completa das suas necessidades têxteis",
@@ -73,11 +74,14 @@ const OfferSection = () => {
             </div>
 
             {/* CTA Button */}
-            <Button 
-              size="lg" 
+            <Button
+              asChild
+              size="lg"
               className="bg-brand-gold text-brand-green hover:bg-white hover:text-brand-green text-xl px-12 py-6 rounded-xl font-bold shadow-gold animate-pulse-gold"
             >
-              Quero meu diagnóstico gratuito agora
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Quero meu diagnóstico gratuito agora
+              </a>
             </Button>
             
             <p className="text-white/70 text-sm mt-4">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Quote } from "lucide-react";
 import corporateImage from "@/assets/corporate-interior.jpg";
+import { contactEmail, contactPhoneDisplay, whatsappUrl } from "@/lib/contact";
 
 const FinalCTASection = () => {
   const basePath = import.meta.env.BASE_URL;
@@ -60,11 +61,10 @@ const FinalCTASection = () => {
             </div>
             
             <div className="mt-8">
-              <Button 
-                size="lg" 
-                className="btn-primary text-xl px-12 py-6 w-full sm:w-auto animate-pulse-gold"
-              >
-                Quero meu diagnóstico gratuito
+              <Button asChild size="lg" className="btn-primary text-xl px-12 py-6 w-full sm:w-auto animate-pulse-gold">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Quero meu diagnóstico gratuito
+                </a>
               </Button>
               
               <p className="text-sm text-brand-gray mt-4">
@@ -88,14 +88,14 @@ const FinalCTASection = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-xl mx-auto">
             <div>
               <div className="text-brand-gold font-semibold mb-2">E-mail</div>
-              <a href="mailto:frutodavide.comercial@gmail.com" className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
-                frutodavide.comercial@gmail.com
+              <a href={`mailto:${contactEmail}`} className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
+                {contactEmail}
               </a>
             </div>
             <div>
-              <div className="text-brand-gold font-semibold mb-2">Instagram</div>
-              <a href="https://www.instagram.com/frutodavide" target="_blank" rel="noopener noreferrer" className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
-                @frutodavide
+              <div className="text-brand-gold font-semibold mb-2">WhatsApp</div>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-brand-green text-lg font-medium hover:text-brand-gold transition-colors">
+                {contactPhoneDisplay}
               </a>
             </div>
           </div>
